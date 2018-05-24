@@ -1,5 +1,5 @@
 <template>
-    <input type="text" v-mask="config" :value="display" @change="change" @input="onInput"/>
+    <input type="text" v-mask="config" :value="display" @change="changeInput" @input="onInput"/>
 </template>
 
 <script>
@@ -51,8 +51,8 @@
             }
         },
         methods: {
-            change(value) {
-                this.$emit('change', value)
+            changeInput() {
+                this.$emit('change', this.lastValue)
             },
             onInput(e) {
                 if (e.isTrusted) return // ignore native event

@@ -347,8 +347,8 @@ function directive_event(name) {
 
   },
   methods: {
-    change(value) {
-      this.$emit('change', value);
+    changeInput() {
+      this.$emit('change', this.lastValue);
     },
 
     onInput(e) {
@@ -369,8 +369,8 @@ function directive_event(name) {
 
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-f28bf6da","hasScoped":false,"optionsId":"1","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component.vue
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{directives:[{name:"mask",rawName:"v-mask",value:(_vm.config),expression:"config"}],attrs:{"type":"text"},domProps:{"value":_vm.display},on:{"change":_vm.change,"input":_vm.onInput}})}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-5be68102","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component.vue
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{directives:[{name:"mask",rawName:"v-mask",value:(_vm.config),expression:"config"}],attrs:{"type":"text"},domProps:{"value":_vm.display},on:{"change":_vm.changeInput,"input":_vm.onInput}})}
 var staticRenderFns = []
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/component-normalizer.js
